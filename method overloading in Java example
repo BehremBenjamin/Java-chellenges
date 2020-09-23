@@ -1,0 +1,31 @@
+class methodOverloading {
+    void test () {
+        System.out.println(" no parameters / arguments");
+    }
+    void test (int a)
+    {
+        System.out.println("one argument: " + a);
+    }
+    void test (int a, int b)
+    {
+        System.out.println("two arguments: " + a + " " +b);
+    }
+
+    double test (double x)
+    {
+        return x*x;
+    }
+};
+
+class OverloadDemo {
+    public static void main (String[] args)
+    {
+        methodOverloading mO = new methodOverloading();
+        mO.test();
+        mO.test(5);
+        mO.test(3,7);
+         double result = mO.test(41.2);
+
+       System.out.println("result of test double = " + result );
+    }
+}
