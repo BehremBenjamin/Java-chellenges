@@ -1,0 +1,46 @@
+class stck {
+    int myStck[] = new int[10];
+    int topOfStack;
+
+    stck() {
+        topOfStack = -1;
+    }
+
+    //Push an intem on the stack
+    void push(int item) {
+        if (topOfStack == 9)
+            System.out.println("Stack is Full!");
+        else
+            myStck[++topOfStack] = item;
+    }
+
+    //Pop an element from the stack
+    int pop() {
+        if (topOfStack < 0) {
+            System.out.println("The stack is underflow!");
+            return 0;
+        } else {
+            return myStck[topOfStack--];
+        }
+    }
+    void showStack () {
+        for (int x = 0; x<10; x++) System.out.println(myStck[x]);
+    }
+}
+
+class TestStack {
+    public static void main(String[] args) {
+        stck myStack1 = new stck();
+        stck myStack2 = new stck();
+
+        for (int i = 0; i < 10; i++) myStack1.push(i);
+        for (int j = 10; j < 20; j++) myStack2.push(j);
+
+        myStack1.showStack();
+        myStack2.showStack();
+
+
+       System.out.println(myStack2.pop());
+       System.out.println(myStack2.pop());
+    }
+}
