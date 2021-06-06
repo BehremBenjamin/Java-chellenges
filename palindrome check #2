@@ -1,3 +1,5 @@
+// == operator makes reference comparision, equals() compares content 
+
 public class Solution {
 
     public static void main(String[] args) {
