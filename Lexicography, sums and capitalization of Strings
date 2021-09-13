@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+  
+   Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        String AB = A.concat(B);
+        System.out.println(A.concat(B).length());
+        
+        if (A.compareTo(B) > 0) System.out.println("Yes");
+            else System.out.println("No");
+        
+        String first_A = A.substring(0,1);
+        String rest_A = A.substring(1);
+        
+        String first_B = B.substring(0,1);
+        String rest_B = B.substring(1);
+        
+        System.out.println(first_A.toUpperCase() + rest_A + 
+            " " + first_B.toUpperCase() + rest_B); 
+    }
+}
