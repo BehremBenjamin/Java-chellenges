@@ -8,7 +8,6 @@ public class Solution {
    Scanner sc=new Scanner(System.in);
         String A=sc.next();
         String B=sc.next();
-        String AB = A.concat(B);
         System.out.println(A.concat(B).length());
         
         if (A.compareTo(B) > 0) System.out.println("Yes");
