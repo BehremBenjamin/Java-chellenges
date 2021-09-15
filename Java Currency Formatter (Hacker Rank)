@@ -7,7 +7,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        float payment = sc.nextFloat();
+        double payment = sc.nextDouble();
         
         NumberFormat u = NumberFormat.getCurrencyInstance(Locale.US);
         NumberFormat i = NumberFormat.getCurrencyInstance(new Locale("en", "in"));
