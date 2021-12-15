@@ -1,0 +1,10 @@
+ public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        
+        int leftSubTreeLeaf = maxDepth(root.left);
+        int rightSubTreeLeaf = maxDepth(root.right);
+        
+       if (leftSubTreeLeaf > rightSubTreeLeaf) return leftSubTreeLeaf+1;
+        return rightSubTreeLeaf+1;
+    }
+}
