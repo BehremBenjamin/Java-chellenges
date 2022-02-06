@@ -1,3 +1,6 @@
+// 42 ms solution
+
+
 class Solution {
    public static int finalValueAfterOperations(String[] operations) {
         int output = 0;
@@ -11,3 +14,19 @@ class Solution {
         return output;
    }
 }
+
+
+/* 0 ms solution
+
+class Solution {
+   public static int finalValueAfterOperations(String[] operations) {
+        int output = 0;
+        for (String s : operations) {
+           if (s.charAt(1) == '+') output+=1;
+            else output-=1;
+        }
+       return output;
+    }   
+}
+
+*/
