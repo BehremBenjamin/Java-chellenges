@@ -1,0 +1,18 @@
+/*
+public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+
+src − This is the source array.
+srcPos − This is the starting position in the source array.
+dest − This is the destination array.
+destPos − This is the starting position in the destination data.
+length − This is the number of array elements to be copied
+*/
+
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int[] ans = new int[nums.length*2];
+        System.arraycopy(nums, 0, ans, 0, nums.length);
+        System.arraycopy(nums, 0, ans, nums.length, nums.length);
+        return ans;
+    }
+}
