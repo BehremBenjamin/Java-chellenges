@@ -1,0 +1,13 @@
+// sorting 3 numbers without an IF control statement
+
+public class Solution {
+    static void comparision(int a, int b, int c) {
+        int max = Math.max(a, Math.max(b, c));
+        int min = Math.min(a, Math.min(b, c));
+        int average = a + b + c - max - min;
+        System.out.println("biggest:" + max +  "\n" + "average:" + average  + "\n" + "smallest:" + min);
+    }
+    public static void main(String[] args) {
+        Solution.comparision(77, 22, 56);
+    }
+}
