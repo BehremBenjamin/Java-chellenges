@@ -1,0 +1,18 @@
+class Solution {
+  public static int[] numberOfPairs(int[] nums) {
+    int[] myArr = new int[101];
+    int[] answer = new int[2];
+    for (int i : nums) myArr[i]+=1;
+        for (int j = 0; j < myArr.length; j++) {
+        if (myArr[j] % 2 == 0 && myArr[j] != 0) answer[0]+=(myArr[j]/2);
+            if (myArr[j] % 2 != 0) { 
+                if (myArr[j] > 1) {
+                answer[0]+=((myArr[j]-1)/2);
+                answer[1]+=1;
+                }
+            else answer[1]+=1;
+            }
+        }
+    return answer;
+    }
+}
