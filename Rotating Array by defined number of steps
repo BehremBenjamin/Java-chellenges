@@ -1,0 +1,19 @@
+public class RotateAnArrayByNumberOfSteps {
+    public static void rotate(int arr[], int length, int steps) {
+        int j = 0;
+        while (steps > 0) {
+            int temp = arr[length-1];
+            for (j = length-1; j > 0; j--) {
+                arr[j] = arr[j-1];
+            }
+            arr[j] = temp;
+            steps--;
+        }
+        for (int f : arr)  System.out.print(f + " ");
+    }
+
+    public static void main(String[] args) {
+        int[] arrToRotate = {1,2,3,4,5,6,7,8,9};
+        rotate(arrToRotate, arrToRotate.length, 5); // output:5 6 7 8 9 1 2 3 4 
+    }
+}
