@@ -1,0 +1,26 @@
+
+public class SmallestMissingNumber {
+
+    //HashMap solution time and space complexity O(n)
+    public static int smallestPositiveMissingNumber(int[] arr, int size) {
+        int smallest;
+        HashMap<Integer, Integer> hs = new HashMap<>();
+        for (int number : arr) {
+            hs.put(number, 1);
+        }
+
+        for (int i = 1; i < size + 1; i++) {
+            if (hs.containsKey(i) == false) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        HashMap<Integer, Integer> hipi = new HashMap<>();
+        int[] arr = {8, 5, 3, 6, 1, 9, 11, 2, 7, 4, 10, 11, 12, 15, 17, 20};
+        System.out.println(Tuesday.smallestPositiveMissingNumber(arr,16));   // 13
+    }
+}
+
